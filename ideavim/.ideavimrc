@@ -56,3 +56,5 @@ map <leader>rn <Action>(RenameElement)
 map <leader>fk <Action>(ReformatCode)
 
 map <leader>fr <Action>(RecentFiles)
+
+map <leader>ca <Action>(ShowIntentionActions)
