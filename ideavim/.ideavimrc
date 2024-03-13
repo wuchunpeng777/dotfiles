@@ -1,0 +1,58 @@
+let mapleader=" "
+
+set ignorecase
+set clipboard
+set hlsearch
+set number
+set relativenumber
+
+Plug 'easymotion/vim-easymotion'
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
+        
+noremap <leader>; :noh<CR>
+noremap \| :vsplit<CR>
+
+" todo
+map <leader>td <Action>(ActivateTODOToolWindow)
+
+" bookmark
+map ml <Action>(ShowBookmarks)
+map mm <Action>(ToggleBookmark)
+map ma <Action>(ToggleBookmarkWithMnemonic)
+
+" jump
+map F <Action>(KJumpAction.Line)
+map f <Action>(AceAction)
+
+" tab navigation
+map <leader>h <Action>(PreviousTab)
+map <leader>l <Action>(NextTab)
+
+" search
+map <leader>fs <Action>(FindInPath)
+map <leader>ff <Action>(GotoFile)
+map <leader>ss <Action>(GotoSymbol)
+map <leader>sc <Action>(FileStructurePopup)
+
+" tab
+map <leader>d <Action>(CloseContent)
+map <leader>bo <Action>(CloseAllEditorsButActive)
+map <leader>pp <Action>(PinActiveEditorTab)
+map <leader>fb <Action>(Switcher)
+
+" comment
+map gc <Action>(CommentByLineComment)
+
+map gu <Action>(FindUsages)
+map gd <Action>(GotoDeclaration)
+
+map <leader>cd <Action>(RevealIn)
+
+map <leader>op <Action>(RiderManageRecentProjects)
+
+map <leader>rn <Action>(RenameElement)
+
+map <leader>fk <Action>(ReformatCode)
+
+map <leader>fr <Action>(RecentFiles)
