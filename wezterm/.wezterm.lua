@@ -175,7 +175,7 @@ win.keys = {
 	},
 	{ mods = "LEADER", key = "w", action = wezterm.action.ShowTabNavigator },
 }
-win.default_prog = { 'powershell.exe','-NoLogo' }
+win.default_prog = { 'C:/Program Files/Git/bin/bash.exe',"-i", "-l" }
 
 
 
