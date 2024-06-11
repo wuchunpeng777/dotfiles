@@ -100,6 +100,7 @@ mac.keys = {
 local win = {}
 win.window_background_image = 'C:/Users/HQ/.config/wezterm/Modified.jpg'
 win.window_close_confirmation = "NeverPrompt"
+win.font = wezterm.font('JetBrainsMono Nerd Font',{weight='DemiBold'})
 win.inactive_pane_hsb = {
 	hue = 1.0,
 	saturation = 1.0,
@@ -174,7 +175,7 @@ win.keys = {
 	},
 	{ mods = "LEADER", key = "w", action = wezterm.action.ShowTabNavigator },
 }
-
+win.default_prog = { 'powershell.exe','-NoLogo' }
 
 
 
