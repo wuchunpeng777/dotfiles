@@ -110,7 +110,7 @@ win.font_size = 12.0
 --取消windows的原生标题栏
 win.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 -- 滚动条尺寸为 15 ，其他方向不需要 pad
-win.window_padding = { left = 0, right = 15, top = 0, bottom = 0 }
+win.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 -- 启用滚动条
 win.enable_scroll_bar = true
 win.colors = {
