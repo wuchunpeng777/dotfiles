@@ -16,7 +16,7 @@ mac.font_size = 18.0
 --取消windows的原生标题栏
 mac.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 -- 滚动条尺寸为 15 ，其他方向不需要 pad
-mac.window_padding = { left = 0, right = 15, top = 0, bottom = 0 }
+mac.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 -- 启用滚动条
 mac.enable_scroll_bar = true
 mac.colors = {
