@@ -51,19 +51,20 @@ mac.keys = {
 			args = { "/bin/zsh", "-l" },
 		}),
 	},
-	{ key = "]",       mods = "LEADER", action = act.ActivateTabRelative(1) },
-	{ key = "[",       mods = "LEADER", action = act.ActivateTabRelative(-1) },
 
-	{ key = "1",       mods = "LEADER", action = wezterm.action({ ActivateTab = 0 }) },
-	{ key = "2",       mods = "LEADER", action = wezterm.action({ ActivateTab = 1 }) },
-	{ key = "3",       mods = "LEADER", action = wezterm.action({ ActivateTab = 2 }) },
-	{ key = "4",       mods = "LEADER", action = wezterm.action({ ActivateTab = 3 }) },
-	{ key = "5",       mods = "LEADER", action = wezterm.action({ ActivateTab = 4 }) },
-	{ key = "6",       mods = "LEADER", action = wezterm.action({ ActivateTab = 5 }) },
-	{ key = "7",       mods = "LEADER", action = wezterm.action({ ActivateTab = 6 }) },
-	{ key = "8",       mods = "LEADER", action = wezterm.action({ ActivateTab = 7 }) },
-	{ key = "9",       mods = "LEADER", action = wezterm.action({ ActivateTab = 8 }) },
-	{ mods = "LEADER", key = "s",       action = wezterm.action.PaneSelect },
+	-- select tab
+	{ key = "1", mods = "LEADER", action = wezterm.action({ ActivateTab = 0 }) },
+	{ key = "2", mods = "LEADER", action = wezterm.action({ ActivateTab = 1 }) },
+	{ key = "3", mods = "LEADER", action = wezterm.action({ ActivateTab = 2 }) },
+	{ key = "4", mods = "LEADER", action = wezterm.action({ ActivateTab = 3 }) },
+	{ key = "5", mods = "LEADER", action = wezterm.action({ ActivateTab = 4 }) },
+	{ key = "6", mods = "LEADER", action = wezterm.action({ ActivateTab = 5 }) },
+	{ key = "7", mods = "LEADER", action = wezterm.action({ ActivateTab = 6 }) },
+	{ key = "8", mods = "LEADER", action = wezterm.action({ ActivateTab = 7 }) },
+	{ key = "9", mods = "LEADER", action = wezterm.action({ ActivateTab = 8 }) },
+	{ mods = "LEADER", key = "s", action = wezterm.action.PaneSelect },
+
+	--rename tab
 	{
 		key = "r",
 		mods = "LEADER",
@@ -80,27 +81,31 @@ mac.keys = {
 		}),
 	},
 	{ mods = "LEADER", key = "w", action = wezterm.action.ShowTabNavigator },
+
+	-- zoom pane
+	{ key = "z", mods = "LEADER", action = "TogglePaneZoomState" },
+
+	-- close pane
+	{ key = "d", mods = "LEADER", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
+
+	-- split window
+	{ key = "-", mods = "LEADER", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
+	{ key = "\\", mods = "LEADER", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
+
+	-- rotate pane
+	{ key = "n", mods = "CTRL", action = act.RotatePanes("Clockwise") },
+
+	-- adjust pane size
+	{ key = "H", mods = "LEADER", action = act.AdjustPaneSize({ "Left", 5 }) },
+	{ key = "J", mods = "LEADER", action = act.AdjustPaneSize({ "Down", 5 }) },
+	{ key = "K", mods = "LEADER", action = act.AdjustPaneSize({ "Up", 5 }) },
+	{ key = "L", mods = "LEADER", action = act.AdjustPaneSize({ "Right", 5 }) },
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 local win = {}
-win.window_background_image = 'C:/Users/HQ/.config/wezterm/Modified.jpg'
+win.window_background_image = "C:/Users/HQ/.config/wezterm/Modified.jpg"
 win.window_close_confirmation = "NeverPrompt"
-win.font = wezterm.font('JetBrainsMono Nerd Font',{weight='DemiBold'})
+win.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
 win.inactive_pane_hsb = {
 	hue = 1.0,
 	saturation = 1.0,
@@ -142,22 +147,23 @@ win.keys = {
 		mods = "LEADER",
 		action = wezterm.action.SpawnCommandInNewTab({
 			label = "Zsh-NewWindow",
-			args = {'powershell.exe','-NoLogo'},
+			args = { "powershell.exe", "-NoLogo" },
 		}),
 	},
-	{ key = "]",       mods = "LEADER", action = act.ActivateTabRelative(1) },
-	{ key = "[",       mods = "LEADER", action = act.ActivateTabRelative(-1) },
 
-	{ key = "1",       mods = "LEADER", action = wezterm.action({ ActivateTab = 0 }) },
-	{ key = "2",       mods = "LEADER", action = wezterm.action({ ActivateTab = 1 }) },
-	{ key = "3",       mods = "LEADER", action = wezterm.action({ ActivateTab = 2 }) },
-	{ key = "4",       mods = "LEADER", action = wezterm.action({ ActivateTab = 3 }) },
-	{ key = "5",       mods = "LEADER", action = wezterm.action({ ActivateTab = 4 }) },
-	{ key = "6",       mods = "LEADER", action = wezterm.action({ ActivateTab = 5 }) },
-	{ key = "7",       mods = "LEADER", action = wezterm.action({ ActivateTab = 6 }) },
-	{ key = "8",       mods = "LEADER", action = wezterm.action({ ActivateTab = 7 }) },
-	{ key = "9",       mods = "LEADER", action = wezterm.action({ ActivateTab = 8 }) },
-	{ mods = "LEADER", key = "s",       action = wezterm.action.PaneSelect },
+	-- select tab
+	{ key = "1", mods = "LEADER", action = wezterm.action({ ActivateTab = 0 }) },
+	{ key = "2", mods = "LEADER", action = wezterm.action({ ActivateTab = 1 }) },
+	{ key = "3", mods = "LEADER", action = wezterm.action({ ActivateTab = 2 }) },
+	{ key = "4", mods = "LEADER", action = wezterm.action({ ActivateTab = 3 }) },
+	{ key = "5", mods = "LEADER", action = wezterm.action({ ActivateTab = 4 }) },
+	{ key = "6", mods = "LEADER", action = wezterm.action({ ActivateTab = 5 }) },
+	{ key = "7", mods = "LEADER", action = wezterm.action({ ActivateTab = 6 }) },
+	{ key = "8", mods = "LEADER", action = wezterm.action({ ActivateTab = 7 }) },
+	{ key = "9", mods = "LEADER", action = wezterm.action({ ActivateTab = 8 }) },
+	{ mods = "LEADER", key = "s", action = wezterm.action.PaneSelect },
+
+	--rename tab
 	{
 		key = "r",
 		mods = "LEADER",
@@ -174,17 +180,27 @@ win.keys = {
 		}),
 	},
 	{ mods = "LEADER", key = "w", action = wezterm.action.ShowTabNavigator },
+
+	-- zoom pane
+	{ key = "z", mods = "LEADER", action = "TogglePaneZoomState" },
+
+	-- close pane
+	{ key = "d", mods = "LEADER", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
+
+	-- split window
+	{ key = "-", mods = "LEADER", action = wezterm.action({ SplitVertical = { domain = "CurrentPaneDomain" } }) },
+	{ key = "\\", mods = "LEADER", action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }) },
+
+	-- rotate pane
+	{ key = "n", mods = "CTRL", action = act.RotatePanes("Clockwise") },
+
+	-- adjust pane size
+	{ key = "H", mods = "LEADER", action = act.AdjustPaneSize({ "Left", 5 }) },
+	{ key = "J", mods = "LEADER", action = act.AdjustPaneSize({ "Down", 5 }) },
+	{ key = "K", mods = "LEADER", action = act.AdjustPaneSize({ "Up", 5 }) },
+	{ key = "L", mods = "LEADER", action = act.AdjustPaneSize({ "Right", 5 }) },
 }
-win.default_prog = { 'powershell.exe','-NoLogo' }
-
-
-
-
-
-
-
-
-
+win.default_prog = { "powershell.exe", "-NoLogo" }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	return win
