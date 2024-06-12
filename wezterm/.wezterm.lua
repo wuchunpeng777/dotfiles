@@ -142,7 +142,7 @@ win.keys = {
 		mods = "LEADER",
 		action = wezterm.action.SpawnCommandInNewTab({
 			label = "Zsh-NewWindow",
-			args = { "/bin/zsh", "-l" },
+			args = {'powershell.exe','-NoLogo'},
 		}),
 	},
 	{ key = "]",       mods = "LEADER", action = act.ActivateTabRelative(1) },
