@@ -103,8 +103,7 @@ mac.keys = {
 }
 
 local win = {}
-win.window_background_opacity = 0.2
-win.win32_system_backdrop = 'Acrylic'
+win.window_background_image = "C:\\Users\\HQ\\.config\\wezterm\\Modified.jpg"
 win.window_close_confirmation = "NeverPrompt"
 win.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
 win.inactive_pane_hsb = {
