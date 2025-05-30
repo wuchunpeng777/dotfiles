@@ -13,6 +13,10 @@ Plug 'preservim/nerdtree'
 noremap <leader>; :noh<CR>
 noremap \| :vsplit<CR>
 
+" tab navigation
+map [b <Action>(PreviousTab)
+map ]b <Action>(NextTab)
+
 " todo
 map <leader>td <Action>(ActivateTODOToolWindow)
 
@@ -25,9 +29,8 @@ map ma <Action>(ToggleBookmarkWithMnemonic)
 map F <Action>(KJumpAction.Line)
 map f <Action>(AceAction)
 
-" tab navigation
-map <leader>h <Action>(PreviousTab)
-map <leader>l <Action>(NextTab)
+map <leader>of <Action>(RevealIn)
+
 
 " search
 map <leader>fs <Action>(FindInPath)
